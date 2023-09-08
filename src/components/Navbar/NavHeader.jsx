@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Navlinks from "./Navlinks";
 import { AiOutlineMenu, AiFillHome } from "react-icons/ai";
-import logo from "../assets/logo_d.png";
+import logo from "../../assets/logo_d.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="bg-white w-screen drop-shadow-md">
+    <nav className="bg-white w-screen drop-shadow-md sticky top-0 z-20">
       <div className="flex items-center font-medium md:justify-around justify-between px-5 py-2">
         {/* logo and text */}
         <Logo />

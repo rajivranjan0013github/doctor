@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { MdExpandMore, MdExpandLess } from "react-icons/md";
-import { links } from "../assets/list";
+import { links } from "../../assets/list";
 
 const Navlinks = () => {
   const [heading, setHeading] = useState(null);
@@ -10,7 +10,7 @@ const Navlinks = () => {
     <>
       {links.map((link) => (
         <div className=" border-slate-700 shadow-sm md:shadow-none">
-          <div className="px-3 py-4 text-left md:cursor-pointer group">
+          <div className="px-3 py-4 text-left md:cursor-pointer group z-20">
             <h1
               style={{ fontFamily: "Roboto" }}
               onClick={() =>
@@ -18,16 +18,18 @@ const Navlinks = () => {
               }
               className=" text-#888888  hover:text-orange-400 transition-colors duration-300 flex justify-between items-center md:text-[16px] text-lg "
             >
-              {link.name}{" "}
-              {link.submenu && (
-                <span>
+              {link.submenu ? (
+                <span className="flex items-center">
+                  {link.name}{" "}
                   {heading !== link.name ? <MdExpandMore /> : <MdExpandLess />}
                 </span>
+              ) : (
+                <Link to={link.link}>{link.name}</Link>
               )}
             </h1>
             {link.sublinks && (
               <div>
-                <div className="absolute top-14 hidden group-hover:md:block hover:md:block bg-white shadow-md ">
+                <div className="absolute top-14 hidden group-hover:md:block hover:md:block bg-white shadow-md z-20 ">
                   <div className="bg-white px-5">
                     {link.sublinks.map((sub) => (
                       <li className="text-sm text-gray-600 my-2.5">
