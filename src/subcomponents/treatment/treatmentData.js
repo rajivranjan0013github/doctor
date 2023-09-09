@@ -1,7 +1,4 @@
-import React from "react";
-
-const Treatments = () => {
-  const services = [
+const services = [
     {
       title: "Minimally Invasive Surgery",
       uri: "#",
@@ -111,21 +108,5 @@ const Treatments = () => {
         "No-scalpel vasectomy is a type of vasectomy procedure in which a specifically designed ringed clamp and a dissecting hemostat is used to puncture the scrotum to access the vas deferens. This is different from a conventional or incisional vasectomy where the scrotal opening is made with a scalpel",
     },
   ];
-  return (
-    <div className="container md:w-[83%] grid md:grid-cols-2 lg:grid-cols-3 gap-3">
-      {services.map((element) => (
-        <div className=" text-center justify-center items-center bg-red-300 flex flex-col p-5 font-[Roboto]">
-          <img
-            className="w-[50px] h-[50px] self-center"
-            src={element.uri}
-            alt=""
-          />
-          <h1 className="text-2xl font-bold">{element.title}</h1>
-          <p>{element.about}</p>
-        </div>
-      ))}
-    </div>
-  );
-};
 
-export default Treatments;
+  export default services

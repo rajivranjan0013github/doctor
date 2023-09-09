@@ -8,8 +8,8 @@ const Navlinks = () => {
 
   return (
     <>
-      {links.map((link) => (
-        <div className=" border-slate-700 shadow-sm md:shadow-none">
+      {links.map((link,index) => (
+        <div key={index} className=" border-slate-700 shadow-sm md:shadow-none">
           <div className="px-3 py-4 text-left md:cursor-pointer group z-20">
             <h1
               style={{ fontFamily: "Roboto" }}
@@ -31,8 +31,8 @@ const Navlinks = () => {
               <div>
                 <div className="absolute top-14 hidden group-hover:md:block hover:md:block bg-white shadow-md z-20 ">
                   <div className="bg-white px-5">
-                    {link.sublinks.map((sub) => (
-                      <li className="text-sm text-gray-600 my-2.5">
+                    {link.sublinks.map((sub,index) => (
+                      <li key={index} className="text-sm text-gray-600 my-2.5">
                         <Link
                           className="hover:text-yellow-400 transition-transform transform hover:translate-x-2 font-['Roboto']"
                           to={sub.link}
@@ -53,8 +53,8 @@ const Navlinks = () => {
             } list-disc `}
           >
             {link.sublinks &&
-              link.sublinks.map((slink) => (
-                <div>
+              link.sublinks.map((slink,index) => (
+                <div key={index}>
                   <li className="text-[15px] pl-5 border-t-1 border-slate-500 shadow-sm py-2 font-[Roboto] ">
                     <Link to={"#"}>{slink.name}</Link>
                   </li>

@@ -54,8 +54,8 @@ const Footer = () => {
           <div className=" w-[100%]">
             <h1 className="text-white text-xl md:pb-6 pb-2">Useful Links</h1>
             <div className="md:grid md:grid-cols-2 ">
-              {list1.map((link) => (
-                <div className="pr-5  ">
+              {list1.map((link,index) => (
+                <div key={index} className="pr-5  ">
                   <Link className="text-[#808080] hover:opacity-60" to={"#"}>
                     {link.name}
                   </Link>
@@ -69,8 +69,8 @@ const Footer = () => {
         <div className=" flex flex-col md:pr-20 pr-2">
           <h1 className="text-white md:pb-6 pb-2 text-xl ">Timings</h1>
           <div className="text-[#808080] md:w-[70%] w-[100%]">
-            {timings.map((element) => (
-              <div className="pr-5 h-auto ">
+            {timings.map((element,index) => (
+              <div key={index} className="pr-5 h-auto ">
                 <div className="flex justify-between">
                   <p>{element.name}</p>
                   <p>{element.time}</p>

@@ -13,8 +13,7 @@
   display: grid;
   grid-template-rows: auto auto auto;
   background-color: rgb(226, 230, 235);
-  border-radius: 20px;
-  box-shadow: 1px 1px 10px 1px #021453;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .profile {
   width: 150px;
@@ -53,5 +52,5 @@
   margin-top: 20px;
   column-gap: 30px;
 }
-@media screen and (min-width: 460xp) {
+@media screen and (min-width: 460px) {
 }

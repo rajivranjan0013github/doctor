@@ -8,6 +8,7 @@ import AboutDoctor from "./components/About/AboutDoctor";
 import AboutHospital from "./components/About/AboutHospital";
 import ContactUs from "./components/ContactUs";
 import Blog from "./components/Blog/Blog";
+import TreatmentDetail from "./subcomponents/treatment/treatmentDetail/TreatmentDetail";
 
 const App = () => {
   return (
@@ -24,6 +25,8 @@ const App = () => {
         />
         <Route path="/urologist-blog" Component={Blog} />
         {/* treatments router here */}
+        <Route path="/:treatmentName" Component={TreatmentDetail} />
+
       </Routes>
       <Footer />
     </Router>
