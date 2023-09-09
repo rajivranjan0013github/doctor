@@ -7,7 +7,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import AboutHome from "../subcomponents/Home/AboutHome";
 import NumberAni from "../subcomponents/Home/NumberAni";
 import Treatments from "../subcomponents/treatment/Treatments";
-import Testimonial from "../subcomponents/Home/Testimonial";
+import Testimonial from "../subcomponents/testimonial/Testimonial";
 
 const Home = () => {
   return (
@@ -66,7 +66,7 @@ const Home = () => {
 
       {/* testimonials and direaction */}
       <div className="max-w-7xl mx-auto   justify-center w-full flex my-4">
-        <Testimonial />
+        <Testimonial/>
       </div>
     </div>
   );

@@ -6,15 +6,14 @@ const Card = ({element,index}) => {
     const { ref, inView } = useInView({
         triggerOnce: false,
       });
-      useEffect(() => {
-         console.log(inView)
-      }, [inView ])
+      // useEffect(() => {
+      //    console.log(inView)
+      // }, [inView ])
       const animationVariants = {
         hidden: { x: 0, opacity: 0 },
         animate: { x: 0, opacity: 1, transition: { duration: 1.5  } },
       };
   return (
-    <div>
         <motion.div 
         key={index}
         initial='hidden'
@@ -30,8 +29,7 @@ const Card = ({element,index}) => {
           <h1 className="text-2xl font-bold text-stone-700">{element.title}</h1>
           <p className="text-stone-800">{element.about}</p>
         </motion.div>
-    </div>
-  )
+   )
 }
 
 export default Card
