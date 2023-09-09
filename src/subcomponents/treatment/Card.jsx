@@ -28,7 +28,7 @@ const Card = ({element,index}) => {
         animate={inView?"animate":"hidden"} 
         variants={animationVariants}
         ref={ref}
-        className="h-full text-left justify-center items-center bg-stone-100 flex flex-col p-5 mb-[1.75rem] font-[Roboto] rounded-3xl shadow-lg"
+        className="h-full text-left justify-center items-center bg-stone-100 flex flex-col p-5 mb-[1.75rem] font-[Roboto] rounded-3xl shadow-lg cursor-pointer"
         onClick={handleNavigate}
         >
           <img

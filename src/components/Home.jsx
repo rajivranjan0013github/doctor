@@ -1,7 +1,6 @@
 import React from "react";
 import img1 from "../assets/5-habits-for-prevention-of-kidney-stones.jpg";
 import img2 from "../assets/do-suspect-kidney-stone.jpg";
-import img3 from "../assets/timeline3.jpg";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import AboutHome from "../subcomponents/Home/AboutHome";
@@ -11,42 +10,23 @@ import Testimonial from "../subcomponents/testimonial/Testimonial";
 
 const Home = () => {
   return (
-    <div className="relative w-full  font-[Roboto]">
-      <Carousel 
-        autoPlay 
-        showThumbs={false} 
-        infiniteLoop 
+    <div className="relative w-full  font-[Roboto] pt-1">
+      <Carousel
+        showArrows={false}
+        infiniteLoop={true}
+        showThumbs={false}
         showStatus={false}
-         
-        >
-        <div
-          className="h-[550px] w-full"
-          style={{
-            backgroundImage: `url(${img1})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        ></div>
-        <div
-          className={"h-full "}
-          style={{
-            backgroundImage: `url(${img2})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          {/* <img src={img2} alt="#" className="h-[550px] object-cover" /> */}
-          {/* <p className="legend"></p> */}
+      >
+        <div>
+          <img src={img1}  alt="prevention-of-kidney-stones"  className="w-full h-auto object-cover"/>
         </div>
-        <div
-          className="h-full w-full"
-          style={{
-            backgroundImage: `url(${img3})`,
-            backgroundSize: "contain",
-            backgroundPosition: "center",
-            backgroundRepeat:'no-repeat'
-          }}
-        ></div>
+        <div>
+          <img src={img2}  alt="do-suspect-kidney-stone"  className="w-full h-auto object-cover"/>
+        </div>
+         
+         
+         
+          
       </Carousel>
       {/* about profile */}
       <div className="max-w-7xl mx-auto justify-center w-full flex">
