@@ -9,11 +9,13 @@ import AboutHospital from "./components/About/AboutHospital";
 import ContactUs from "./components/ContactUs";
 import Blog from "./components/Blog/Blog";
 import TreatmentDetail from "./subcomponents/treatment/treatmentDetail/TreatmentDetail";
+import SideNavbar from "./components/sideNavbar/SideNavbar";
 
 const App = () => {
   return (
     <Router>
       <Navbar />
+      <SideNavbar/>
       <Routes>
         <Route path="/" Component={Home} />
         <Route path="/contact-us" Component={ContactUs} />
