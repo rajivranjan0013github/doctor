@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Navlinks from "./Navlinks";
 import { AiOutlineMenu, AiFillHome } from "react-icons/ai";
@@ -6,6 +6,22 @@ import logo from "../../assets/logo_d.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const[windowWidth,setWindowWidth] = useState(window.innerWidth)
+
+  useEffect(()=>{
+    const handleWindowWidth=()=>{
+      setWindowWidth(window.innerWidth)
+      if(window.innerWidth>768){
+        setOpen(false)
+        
+      }
+
+    }
+    window.addEventListener("resize",handleWindowWidth);
+    return () => {
+      window.removeEventListener("resize", handleWindowWidth);
+    };
+  },[windowWidth])
   return (
     <nav className="bg-white w-screen drop-shadow-md sticky top-0 z-20">
       <div className="flex items-center font-medium md:justify-around justify-between px-5 py-2">
@@ -20,7 +36,7 @@ const Navbar = () => {
             <AiOutlineMenu />
           </div>
           {/* desktop nav */}
-          <ul className="md:flex hidden items-center gap-8 font-[Poppins]">
+          <ul className="md:flex hidden  items-center gap-8 font-[Poppins]">
             <li className="md:text-lg text-2xl">
               <Link
                 className="hover:text-yellow-400 transition-transform transform hover:translate-x-2"
@@ -33,14 +49,14 @@ const Navbar = () => {
           </ul>
           {/* mobile nav */}
 
-          <div className="absolute z-100 top-[100px] left-0 w-screen shadow-md bg-white">
+          <div className="absolute z-100 top-[90px] left-0 w-screen shadow-md bg-white  px-[2rem] ">
             <ul
               className={`list ${
                 open ? "max-h-[800px]" : "max-h-0"
               } overflow-hidden transition-max-height duration-500 ease-in-out`}
             >
-              <li className="text-lg pt-1 px-3 shadow-sm py-3">
-                <Link className="hover:text-yellow-400 text-xl " to={"/"}>
+              <li className="text-lg pt-1 px-3 shadow-inner-md  py-3 my-3">
+                <Link className="hover:text-yellow-400 text-l " to={"/"}>
                   <AiFillHome />
                 </Link>
               </li>
