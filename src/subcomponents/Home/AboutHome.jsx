@@ -21,8 +21,8 @@ const AboutHome = () => {
     initial="hidden"
     animate={inView?"animate":"hidden"} 
     variants={animationVariants}
-    className="w-[80%] py-[1rem]" >
-      <div className="aboutheading">
+    className="w-[80%] py-[1rem] " >
+      <div className="aboutheading ">
         <p>About</p>
       </div>
       <div className="cardAndTimeline ">

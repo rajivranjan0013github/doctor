@@ -44,7 +44,7 @@ const Testimonial = () => {
           infiniteLoop 
           showStatus={false}
           interval={10000}
-          className="w-full   flex flex-col justify-center item-center shadow-lg rounded-2xl"
+          className="w-full    flex flex-col justify-center item-center shadow-lg rounded-2xl"
         >
           {list.map((obj,index) => (
             <div key={index} className=" py-[3rem] mx-[2rem] ">
