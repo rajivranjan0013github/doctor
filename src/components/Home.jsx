@@ -38,13 +38,22 @@ const Home = () => {
           {/* <img src={img2} alt="#" className="h-[550px] object-cover" /> */}
           {/* <p className="legend"></p> */}
         </div>
+        <div
+          className="h-full w-full"
+          style={{
+            backgroundImage: `url(${img3})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat:'no-repeat'
+          }}
+        ></div>
       </Carousel>
       {/* about profile */}
       <div className="max-w-7xl mx-auto justify-center w-full flex">
         <AboutHome />
       </div>
       {/* number of services part */}
-      <div className=" max-w-7xl mx-auto    w-full my-3 justify-center flex">
+      <div className=" max-w-7xl mx-auto w-full my-3 justify-center flex">
         <NumberAni />
       </div>
       <div className="items-center flex flex-col  max-w-7xl mx-auto  ">

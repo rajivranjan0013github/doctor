@@ -4,8 +4,10 @@ import CountUp from "react-countup";
 
 const NumberAni = () => {
   const { ref, inView } = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
   });
+ 
+
   const countArray = [
     { name: "LASER & OPEN SURGERIES DONE", count: 1450 },
     { name: "PROSTATE DISEASE CASES TREATED", count: 4800 },
@@ -15,7 +17,7 @@ const NumberAni = () => {
   return (
     <div
       ref={ref}
-      className="counter-animation container md:w-[83%] flex flex-wrap justify-evenly shadow-lg text-center bg-gradient-to-r from-blue-600 to-cyan-500 text-white  p-4 rounded-md"
+      className="counter-animation container md:w-[83%] flex flex-wrap justify-evenly shadow-lg text-center bg-gradient-to-r from-blue-600 to-cyan-500 text-white  p-4 rounded-lg"
     >
       {inView &&
         countArray.map((obj) => (
