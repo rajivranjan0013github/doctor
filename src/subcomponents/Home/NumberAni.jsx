@@ -15,7 +15,7 @@ const NumberAni = () => {
   return (
     <div
       ref={ref}
-      className="counter-animation container md:w-[83%] flex flex-wrap justify-evenly shadow-lg text-center bg-gradient-to-r from-blue-600 to-cyan-500 text-white  p-4"
+      className="counter-animation container md:w-[83%] flex flex-wrap justify-evenly shadow-lg text-center bg-gradient-to-r from-blue-600 to-cyan-500 text-white  p-4 rounded-md"
     >
       {inView &&
         countArray.map((obj) => (

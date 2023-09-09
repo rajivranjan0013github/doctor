@@ -12,7 +12,13 @@ import Testimonial from "../subcomponents/Home/Testimonial";
 const Home = () => {
   return (
     <div className="relative w-full  font-[Roboto]">
-      <Carousel autoPlay showThumbs={false} infiniteLoop showStatus={false}>
+      <Carousel 
+        autoPlay 
+        showThumbs={false} 
+        infiniteLoop 
+        showStatus={false}
+         
+        >
         <div
           className="h-[550px] w-full"
           style={{
@@ -30,18 +36,18 @@ const Home = () => {
           }}
         >
           {/* <img src={img2} alt="#" className="h-[550px] object-cover" /> */}
-          {/* <p className="legend">rajiv ranjan</p> */}
+          {/* <p className="legend"></p> */}
         </div>
       </Carousel>
       {/* about profile */}
-      <div className="justify-center w-full flex">
+      <div className="max-w-7xl mx-auto justify-center w-full flex">
         <AboutHome />
       </div>
       {/* number of services part */}
-      <div className="mx-1 w-full my-3 justify-center flex">
+      <div className=" max-w-7xl mx-auto    w-full my-3 justify-center flex">
         <NumberAni />
       </div>
-      <div className="items-center flex flex-col ">
+      <div className="items-center flex flex-col  max-w-7xl mx-auto  ">
         <div className="inline-block text-3xl my-3 font-semibold">
           <h1>Our Services</h1>
           <div className="border-b-2 border-black border-dotted"></div>
@@ -50,7 +56,7 @@ const Home = () => {
       </div>
 
       {/* testimonials and direaction */}
-      <div className="justify-center w-full flex my-4">
+      <div className="max-w-7xl mx-auto   justify-center w-full flex my-4">
         <Testimonial />
       </div>
     </div>

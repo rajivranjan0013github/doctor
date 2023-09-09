@@ -4,21 +4,21 @@ import img from "../../assets/profile.png";
 
 const AboutHome = () => {
   return (
-    <div className="w-[80%] ">
+    <div className="w-[80%] py-[1rem] ">
       <div className="aboutheading">
         <p>About</p>
       </div>
-      <div className="cardAndTimeline">
-        <div className="card">
-          <div className="profileContain">
+      <div className="cardAndTimeline ">
+        <div className="card rounded-lg">
+          <div className="profileContain py-2">
             <img className="profile" src={img} />
           </div>
           <div className="names">
             <div className="name">Dr. Rajan Kumar Sinha</div>
             <div className="degree">MBBS,MS(General surgery),Mch(Urology)</div>
           </div>
-          <div className="description">
-            <p>
+          <div className="description ">
+            <p className="text-stone-700 text-left  px-8">
               Dr. Sinha has expertise in{" "}
               <b>
                 Endourology, Reconstructive Urology, , Urological Oncology,
