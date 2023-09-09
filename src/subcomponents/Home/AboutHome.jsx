@@ -12,8 +12,8 @@ const AboutHome = () => {
   //   console.log("Element is in view: ", inView)
   // }, [inView])
   const animationVariants = {
-    hidden: { x: -500, opacity: 0 },
-    animate: { x: 0, opacity: 1, transition: { duration: 1  } },
+    hidden: { x: -300, opacity: 0 },
+    animate: { x: 0, opacity: 1, transition: { duration: 2  } },
   };
   return (
     <motion.div

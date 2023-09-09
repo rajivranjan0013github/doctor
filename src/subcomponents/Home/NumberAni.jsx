@@ -20,8 +20,8 @@ const NumberAni = () => {
       className="counter-animation container md:w-[83%] flex flex-wrap justify-evenly shadow-lg text-center bg-gradient-to-r from-blue-600 to-cyan-500 text-white  p-4 rounded-lg"
     >
       {inView &&
-        countArray.map((obj) => (
-          <div className="w-[150px]  flex flex-col py-3 ">
+        countArray.map((obj,index) => (
+          <div key={index} className="w-[150px]  flex flex-col py-3 ">
             {/* <h1>{obj.count}</h1> */}
             <div className="text-4xl font-[Roboto] font-bold">
               <CountUp end={obj.count} delay={1 / 2} duration={4} />

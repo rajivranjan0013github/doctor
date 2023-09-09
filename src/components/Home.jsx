@@ -6,7 +6,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import AboutHome from "../subcomponents/Home/AboutHome";
 import NumberAni from "../subcomponents/Home/NumberAni";
-import Treatments from "../subcomponents/Home/Treatments";
+import Treatments from "../subcomponents/treatment/Treatments";
 import Testimonial from "../subcomponents/Home/Testimonial";
 
 const Home = () => {
@@ -53,10 +53,10 @@ const Home = () => {
         <AboutHome />
       </div>
       {/* number of services part */}
-      <div className=" max-w-7xl mx-auto w-full my-3 justify-center flex">
+      <div className=" max-w-7xl mx-auto  w-[95%] my-3 justify-center flex">
         <NumberAni />
       </div>
-      <div className="items-center flex flex-col  max-w-7xl mx-auto  ">
+      <div className="items-center flex flex-col  max-w-7xl w-[95%]  mx-auto  ">
         <div className="inline-block text-3xl my-3 font-semibold">
           <h1>Our Services</h1>
           <div className="border-b-2 border-black border-dotted"></div>
