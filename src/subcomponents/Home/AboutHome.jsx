@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const AboutHome = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
   // useEffect(() => {
   //   console.log("Element is in view: ", inView)

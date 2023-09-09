@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const MapAddress = () => {
     const {ref,inView}=useInView({
-        triggerOnce:false
+        triggerOnce:true
       })
       const animationVariants={
         hidden: { x: 0, scale: 0.5 },

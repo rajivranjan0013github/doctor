@@ -20,7 +20,7 @@ const Testimonial = () => {
     },
   ];
   const {ref,inView}=useInView({
-    triggerOnce:false
+    triggerOnce:true
   })
   const animationVariants={
     hidden: { x: -300, opacity: 0 },
