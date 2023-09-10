@@ -5,6 +5,7 @@ import MapAddress from "../../testimonial/MapAddress"
 import {BsFillCalendarWeekFill} from 'react-icons/bs'
 
 const TreatmentDetailCard = ({data}) => {
+  
     const[ref,inView]=useInView({
         triggerOnce:true,
     })
