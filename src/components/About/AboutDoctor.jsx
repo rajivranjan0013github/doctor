@@ -1,10 +1,19 @@
 import React from "react";
 import Img from "../../assets/profile.png";
 import { LiaCalendarSolid } from "react-icons/lia";
-
+import {motion } from 'framer-motion'
 const AboutDoctor = () => {
+
+  const animatedVariant={
+    hidden: { x: -300, opacity: 0 },
+    animate: { x: 0, opacity: 1, transition: { duration: 2  } },
+  }
   return (
-    <div className="flex justify-center p-3">
+    <motion.div 
+      initial='hidden'
+      animate='animate'
+      variants={animatedVariant}
+      className="flex justify-center p-3">
       <div className="container md:w-[83%] grid md:grid-cols-2 grid-row font-[Roboto] ">
         <div>
           <img src={Img} alt="" className="w-full " />
@@ -36,7 +45,7 @@ const AboutDoctor = () => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

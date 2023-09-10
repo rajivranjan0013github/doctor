@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import { MdExpandMore, MdExpandLess } from "react-icons/md";
 import { links } from "../../assets/list";
 
-const Navlinks = () => {
+const Navlinks = ({setOpen,open}) => {
   const [heading, setHeading] = useState(null);
-
-  return (
+   return (
     <>
       {links.map((link,index) => (
         <div key={index} className=" border-slate-700 shadow-sm md:shadow-none">
@@ -24,7 +23,7 @@ const Navlinks = () => {
                   {heading !== link.name ? <MdExpandMore /> : <MdExpandLess />}
                 </span>
               ) : (
-                <Link to={link.link}>{link.name}</Link>
+                <Link to={link.link} >{link.name}</Link>
               )}
             </h1>
             {link.sublinks && (
@@ -36,7 +35,7 @@ const Navlinks = () => {
                         <Link
                           className="hover:text-yellow-400 transition-transform transform hover:translate-x-2 font-['Roboto']"
                           to={sub.link}
-                        >
+                        > 
                           {sub.name}
                         </Link>
                       </li>
@@ -56,7 +55,7 @@ const Navlinks = () => {
               link.sublinks.map((slink,index) => (
                 <div key={index}>
                   <li className="text-[15px] pl-5 border-t-1 border-slate-500 shadow-sm py-2 font-[Roboto] ">
-                    <Link to={"#"}>{slink.name}</Link>
+                    <Link to={slink.link} onClick={()=>{setOpen(!open)}} >{slink.name}</Link>
                   </li>
                 </div>
               ))}

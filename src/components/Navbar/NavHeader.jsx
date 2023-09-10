@@ -60,7 +60,7 @@ const Navbar = () => {
                   <AiFillHome />
                 </Link>
               </li>
-              <Navlinks />
+              <Navlinks setOpen={setOpen} open={open} />
             </ul>
           </div>
         </div>
