@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import  {useParams} from'react-router-dom'
-import services from'../treatmentData'
+import TreatmentDetailData from './TreatmentDetailData/TreatmentDetailData';
 import TreatmentDetailCard from './TreatmentDetailCard';
 
 const TreatmentDetail = () => {
@@ -8,10 +8,11 @@ const TreatmentDetail = () => {
     const  {treatmentName}= useParams();
     const [data,setData]=useState({})
     useEffect(() => {
-        const matchingElement = services.find((element) => element.title === treatmentName);
+ 
+        const matchingElement = TreatmentDetailData.find((element) => element.name === treatmentName);
         if (matchingElement) {
           setData(matchingElement);
-        }
+         }
         window.scrollTo(0,0); //scroll to top when page change
       }, [treatmentName]);
    return (

@@ -7,6 +7,7 @@ import AboutHome from "../subcomponents/Home/AboutHome";
 import NumberAni from "../subcomponents/Home/NumberAni";
 import Treatments from "../subcomponents/treatment/Treatments";
 import Testimonial from "../subcomponents/testimonial/Testimonial";
+import HomeTreatment from "../subcomponents/treatment/HomeTreatment";
 
 const Home = () => {
   return (
@@ -36,12 +37,13 @@ const Home = () => {
       <div className=" max-w-7xl mx-auto  w-[95%] my-3 justify-center flex">
         <NumberAni />
       </div>
-      <div className="items-center flex flex-col  max-w-7xl w-[95%]  mx-auto  ">
-        <div className="inline-block text-3xl my-3 font-semibold">
+      <div className="      max-w-7xl  	  w-[95%]  mx-auto  ">
+       <div className="flex  flex-col  mx-auto md:w-[83%] bg-stone-300 rounded-2xl shadow-xl px-4 justify-center items-center">
+       <div className="inline-block text-3xl my-3 font-semibold   text-stone-700">
           <h1>Our Services</h1>
-          <div className="border-b-2 border-black border-dotted"></div>
         </div>
-        <Treatments />
+        <HomeTreatment />
+       </div>
       </div>
 
       {/* testimonials and direaction */}

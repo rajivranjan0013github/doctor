@@ -10,6 +10,7 @@ import ContactUs from "./components/ContactUs";
 import Blog from "./components/Blog/Blog";
 import TreatmentDetail from "./subcomponents/treatment/treatmentDetail/TreatmentDetail";
 import SideNavbar from "./components/sideNavbar/SideNavbar";
+import Treatments from "./subcomponents/treatment/Treatments";
 
 const App = () => {
   return (
@@ -27,6 +28,8 @@ const App = () => {
         />
         <Route path="/urologist-blog" Component={Blog} />
         {/* treatments router here */}
+        <Route path="/services" Component={Treatments} />
+
         <Route path="/:treatmentName" Component={TreatmentDetail} />
 
       </Routes>

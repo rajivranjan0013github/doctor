@@ -3,18 +3,18 @@ import {motion} from 'framer-motion'
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from 'react-router-dom';
 
-const Card = ({name,description,index}) => {
-  window.scrollTo(0,0);
+const HomeCard = ({name,description,index}) => {
     const { ref, inView } = useInView({
         triggerOnce: true,
       });
+
       const navigate=useNavigate();
-      // useEffect(() => {
-      //    console.log(inView)
-      // }, [inView ])
+    //   useEffect(() => {
+    //      console.log(inView)
+    //   }, [inView ])
       const animationVariants = {
-        hidden: { x: 0, opacity: 0 },
-        animate: { x: 0, opacity: 1, transition: { duration: 1.5  } },
+        hidden: { x: -150, scale:0.1 },
+        animate: { x: 0, scale: 1, transition: { duration: 1.5  } },
       };
       const handleNavigate=()=>{
        
@@ -29,7 +29,7 @@ const Card = ({name,description,index}) => {
         animate={inView?"animate":"hidden"} 
         variants={animationVariants}
         ref={ref}
-        className="h-full text-left justify-center items-center bg-stone-100 flex flex-col p-5 mb-[1.75rem] font-[Roboto] rounded-3xl shadow-lg cursor-pointer"
+        className="  text-left p-2 justify-center items-center border-2   flex flex-col    font-[Roboto]  shadow-lg cursor-pointer hover:bg-blue-400 hover:border-none "
         onClick={handleNavigate}
         >
           {/* <img
@@ -37,10 +37,9 @@ const Card = ({name,description,index}) => {
             src={element.uri}
             alt={element.title}
           /> */}
-          <h1 className="text-2xl font-bold text-stone-700">{name}</h1>
-          <p className="text-stone-800">{description}</p>
+          <h1 className="text-sm   font-bold text-stone-700">{name}</h1>
         </motion.div>
    )
 }
 
-export default Card
+export default HomeCard
