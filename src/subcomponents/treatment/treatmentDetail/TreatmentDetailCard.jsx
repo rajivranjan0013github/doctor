@@ -3,6 +3,7 @@ import {motion} from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import MapAddress from "../../testimonial/MapAddress"
 import {BsFillCalendarWeekFill} from 'react-icons/bs'
+import Button from '../../../utils/Button'
 
 const TreatmentDetailCard = ({data}) => {
   
@@ -75,10 +76,10 @@ const TreatmentDetailCard = ({data}) => {
             <h1 className='text-zinc-700 py-6'>
               {data.consultation}
             </h1>
-            <div className=' flex justify-center items-center'>
-            <button className='bg-blue-500  hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded flex gap-3'> <span>Book Appointment</span> <BsFillCalendarWeekFill size={'1.2rem'}/> </button>
-
-            </div>
+              <Button 
+                BsFillCalendarWeekFill={BsFillCalendarWeekFill} 
+                classStyle={"bg-blue-500  hover:bg-blue-700 border-blue-700 "}
+                text={"Book Appointment"}/>
           </div>
         
         {/* subdata relate to treatment */}

@@ -8,7 +8,7 @@ import bladder from '../../assets/services_image/bladder_cancer.png'
 
 const HomeTreatment = () => {
     const data=[
-        {name: 'Kidney Stone Treatment',img:kidney},
+        {name: 'Kidney Stone ',img:kidney},
         { name: 'Endourology',img:endourology},
         {name: 'Andrology & Infertility',img:infertility },
         {name: 'Bladder Cancer',img:bladder},

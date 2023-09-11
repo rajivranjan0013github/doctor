@@ -1,8 +1,11 @@
 import React from "react";
 import Img from "../../assets/profile.png";
-import { LiaCalendarSolid } from "react-icons/lia";
+import {BsFillCalendarWeekFill,BsWhatsapp} from 'react-icons/bs'
 import {motion } from 'framer-motion'
+import Button from "../../utils/Button";
+import { Link } from "react-router-dom";
 const AboutDoctor = () => {
+  window.scrollTo(0,0);
 
   const animatedVariant={
     hidden: { x: -300, opacity: 0 },
@@ -43,8 +46,27 @@ const AboutDoctor = () => {
             patients to develop personalized treatment plans that meet their
             unique needs.
           </p>
+          <div className=" justify-between p-2   flex flex-col sm:flex-row gap-4">
+            <Link target="_blank" to="https://wa.me/9709993104">
+            <Button  
+                  classStyle={"bg-green-500  hover:bg-green-700 border-green-700 "}
+                  BsFillCalendarWeekFill={BsWhatsapp} 
+                  text={"Chat on Whatsapp"}/>
+            </Link>
+            <Link>
+            
+            </Link>
+           
+            <Button 
+                  classStyle={"bg-blue-500  hover:bg-blue-700 border-blue-700 "}
+                  BsFillCalendarWeekFill={BsFillCalendarWeekFill} 
+                  text={"Book an Appointment"}/>
+
+          </div>
         </div>
+        
       </div>
+      
     </motion.div>
   );
 };

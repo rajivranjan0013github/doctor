@@ -1,12 +1,16 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
+import {motion} from 'framer-motion'
 
 const NumberAni = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
- 
+  const animationVariants = {
+    hidden: { x: -300, opacity:0 },
+    animate: { x: 0, opacity: 1, transition: { duration: 1.5  } },
+  };
 
   const countArray = [
     { name: "LASER & OPEN SURGERIES DONE", count: 1450 },
@@ -15,8 +19,11 @@ const NumberAni = () => {
     { name: "ERECTILE DYSFUNCTION CASES TREATED", count: 12000 },
   ];
   return (
-    <div
+    <motion.div
       ref={ref}
+        initial='hidden'
+        animate={inView?"animate":"hidden"} 
+        variants={animationVariants}
       className="counter-animation container md:w-[83%] flex flex-wrap justify-evenly shadow-lg text-center bg-gradient-to-r from-blue-600 to-cyan-500 text-white  p-4 rounded-lg"
     >
       {inView &&
@@ -30,7 +37,7 @@ const NumberAni = () => {
             <p>{obj.name}</p>
           </div>
         ))}
-    </div>
+    </motion.div>
   );
 };
 
