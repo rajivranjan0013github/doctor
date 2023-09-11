@@ -1,6 +1,22 @@
+ 
+import kidney from '../../../../assets/services_image/kidney_stone.png'
+import endourology from '../../../../assets/services_image/Endourology.svg'
+import infertility  from '../../../../assets/services_image/infertility.svg'
+import bladder from '../../../../assets/services_image/bladder_cancer.png'
+import Laparoscopic from '../../../../assets/services_image/laparoscopic.png'
+import Urethral from '../../../../assets/services_image/urethral.png'
+import Prostate from '../../../../assets/services_image/Prostate.png'
+import LaserUrology from '../../../../assets/services_image/Laser_Urology.png'
+import Reconstructive_Urology from '../../../../assets/services_image/Reconstructive_Urology.png'
+import LaparoscopicSurgery from '../../../../assets/services_image/LaparoscopicSurgery.png'
+import Thuflep from '../../../../assets/services_image/Thuflep.png'
+import Lithotripsy from '../../../../assets/services_image/Lithotripsy.png'
+
+
 const TreatmentDetailData=[
     {
         name: 'Kidney Stone Treatment',
+        img:kidney,
         description:
           'Kidney stone treatment involves various medical techniques to address kidney stones, which are solid masses formed from crystals in the urine. These stones can cause severe pain and discomfort and may require intervention for removal.',
         indications: {
@@ -24,9 +40,9 @@ const TreatmentDetailData=[
         consultation:
           'If you or someone you know is experiencing kidney stones or has been diagnosed, it is crucial to consult with a qualified urologist or healthcare provider. They can provide a thorough evaluation, discuss treatment options, and address any questions or concerns you may have.',
       },
-  
   {
     name: 'Endourology',
+    img:endourology,
     description:
       'Endourology is a minimally invasive surgical technique that involves using small instruments and cameras to diagnose and treat various urinary tract disorders. It allows for procedures within the urinary system without the need for large incisions, resulting in reduced pain and faster recovery times.',
     indications: {
@@ -52,12 +68,9 @@ const TreatmentDetailData=[
     consultation:
       'If you or someone you know is considering Endourology for a urinary tract condition, consult with a qualified urologist. They can provide a thorough evaluation, discuss the suitability of Endourology for your case, and address any questions or concerns you may have.',
   },
-
-
-
-
   {
     name: 'Lithotripsy',
+    img:Lithotripsy,
     description:
       'Lithotripsy is a medical procedure used to break down and fragment kidney stones or other urinary tract stones into smaller pieces, making it easier for the body to pass them naturally. It is a non-invasive approach to treating stones in the urinary system.',
     indications: {
@@ -83,6 +96,7 @@ const TreatmentDetailData=[
 
 {
     name: 'Laparoscopic Urology',
+    img:Laparoscopic,
     description:
       'Laparoscopic urology, also known as minimally invasive urologic surgery, is an advanced surgical technique used to diagnose and treat various urological conditions. It involves the use of small incisions and specialized instruments, including a laparoscope (camera), to access and address urologic issues.',
     indications: {
@@ -107,10 +121,9 @@ const TreatmentDetailData=[
     consultation:
       'If you have a urological condition or require urologic surgery, it is important to consult with a qualified urologist experienced in laparoscopic techniques. They can provide a thorough evaluation, discuss treatment options, and address any questions or concerns you may have.',
   },
-
-
   {
     name: 'Urethral Stricture',
+    img:Urethral,
     description:
       'A urethral stricture is a medical condition characterized by the narrowing or scarring of the urethra, which is the tube that carries urine from the bladder to the outside of the body. Urethral strictures can cause difficulty in urination and may require medical intervention for diagnosis and treatment.',
     indications: {
@@ -133,9 +146,9 @@ const TreatmentDetailData=[
     consultation:
       'If you have symptoms of a urethral stricture, such as urinary difficulty or recurrent infections, it is essential to consult with a qualified urologist. They can provide an accurate diagnosis, discuss treatment options, and address any questions or concerns you may have.',
   },
- 
   {
     name: 'Prostate',
+    img:Prostate,
   description:
     'Prostate cancer is a type of cancer that develops in the prostate gland, which is a part of the male reproductive system. It is one of the most common cancers among men. Prostate cancer usually grows slowly and may not cause significant symptoms in its early stages. However, it can be aggressive in some cases.',
   indications: {
@@ -157,10 +170,9 @@ const TreatmentDetailData=[
   consultation:
     'If you or someone you know is concerned about prostate cancer or experiences symptoms, it is crucial to consult with a qualified healthcare provider or urologist. Early detection and a personalized treatment plan can lead to better outcomes.',
 },
-
-
 {
     name: 'Bladder Cancer',
+    img:bladder,
     description:
       'Bladder cancer is a type of cancer that begins in the cells of the bladder, a hollow organ located in the lower abdomen. It is one of the most common cancers of the urinary system. Bladder cancer can vary in severity, with some cases being non-invasive and others invasive, spreading into deeper layers of the bladder wall.',
     indications: {
@@ -181,11 +193,9 @@ const TreatmentDetailData=[
     consultation:
       'If you suspect or have been diagnosed with bladder cancer, it is crucial to consult with a qualified oncologist or urologist. Early detection and a personalized treatment plan can lead to better outcomes.',
   },
-
-
-
   {
     name: 'Laser Urology',
+    img:LaserUrology,
     description:
       'Laser treatment in urology is a specialized medical technique that utilizes laser technology to diagnose and treat various urological conditions. It offers precise and minimally invasive solutions for a range of urological issues, including kidney stones, benign prostatic hyperplasia (BPH), and urological tumors.',
     indications: {
@@ -209,11 +219,9 @@ const TreatmentDetailData=[
     consultation:
       'If you have a urological condition that may benefit from laser treatment, it is crucial to consult with a qualified urologist or healthcare provider experienced in laser urology procedures. They can evaluate your condition, discuss treatment options, and create a personalized treatment plan.',
   },
-
-
-
   {
     name: 'Reconstructive Urology',
+    img:Reconstructive_Urology,
     description:
       'Reconstructive urology is a specialized field of urology that focuses on the surgical treatment and restoration of the urinary tract and male reproductive organs. It involves procedures to repair or reconstruct various urological structures and functions that may be damaged or compromised due to congenital conditions, trauma, cancer, or other medical issues.',
     indications: {
@@ -241,6 +249,7 @@ const TreatmentDetailData=[
 
   {
     name: 'Laparoscopic Surgery',
+    img:LaparoscopicSurgery,
     description:
       'Laparoscopic surgery, also known as minimally invasive surgery or keyhole surgery, is a modern surgical technique that allows surgeons to perform various procedures through small incisions using specialized instruments and a camera called a laparoscope. This approach offers several benefits over traditional open surgery, including reduced pain, shorter hospital stays, quicker recovery times, and improved cosmetic outcomes.',
     indications: {
@@ -271,6 +280,7 @@ const TreatmentDetailData=[
 
   {
     name: "Prostate (Thuflep)",
+    img:Thuflep,
     description:
     'Thulium Fiber Laser Enucleation is a minimally invasive surgical procedure used for the treatment of benign prostatic hyperplasia (BPH), a condition characterized by the enlargement of the prostate gland. This procedure aims to alleviate urinary symptoms by removing excess prostate tissue that is causing obstruction.',
     indications: {
@@ -293,6 +303,7 @@ const TreatmentDetailData=[
     },
     {
         name: 'Andrology & Infertility',
+        img:infertility,
         description:
           'Andrology is a specialized branch of medicine that focuses on male reproductive health, encompassing the diagnosis and treatment of male fertility issues and sexual dysfunction. It plays a crucial role in helping individuals and couples overcome challenges related to male reproductive health.',
         indications: {

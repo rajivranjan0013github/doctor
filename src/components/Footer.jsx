@@ -22,7 +22,7 @@ const Footer = () => {
     <div className=" font-[Roboto] w-full">
       <div className=" w-screen bg-[#151515] md:grid grid-cols-3 gap-4 p-6">
         {/* first start*/}
-        <div className="text-[#808080]  flex justify-start md:justify-end md:pr-7 pr-0">
+        <div className="text-[#808080]   flex justify-start md:justify-end md:pr-7 pr-0">
           <div className="">
             <Logo />
             <div className="py-5">
@@ -34,9 +34,15 @@ const Footer = () => {
                 <br /> Bihar 812001
               </p>
             </div>
-            <button className="bg-[#1196CC] text-white p-2 rounded-md px-4 hover:opacity-70">
-              Get Direction
-            </button>
+        <Link 
+            target="_blank" 
+            to="https://www.google.com/maps/place/Dr+Rajan+Kumar+Sinha+(Superspecialist)+%7BM.Ch+-Urology%7D/@25.253668,87.008595,17z/data=!4m6!3m5!1s0x39f036209d394ebb:0xed9af541658ee7f5!8m2!3d25.2536679!4d87.0085947!16s%2Fg%2F11dybcrl_p?hl=en&entry=ttu">
+              <button  className="bg-[#1196CC] text-white p-2 rounded-md px-4 hover:opacity-70">
+                Get Direction
+              </button>
+        </Link>
+
+            
             <div className="py-5">
               <div className="flex">
                 <IoCall className="self-center" />

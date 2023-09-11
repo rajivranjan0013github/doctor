@@ -1,13 +1,17 @@
 import React from 'react'
 import HomeCard from './treatmentDetail/TreatmentDetailData/HomeCard';
 import { useNavigate } from 'react-router-dom';
+import kidney from '../../assets/services_image/kidney_stone.png'
+import endourology from '../../assets/services_image/Endourology.svg'
+import infertility  from '../../assets/services_image/infertility.svg'
+import bladder from '../../assets/services_image/bladder_cancer.png'
 
 const HomeTreatment = () => {
     const data=[
-        {name: 'Kidney Stone Treatment',},
-        { name: 'Endourology',},
-        {name: 'Andrology & Infertility',},
-        {name: 'Bladder Cancer',},
+        {name: 'Kidney Stone ',img:kidney},
+        { name: 'Endourology',img:endourology},
+        {name: 'Andrology & Infertility',img:infertility },
+        {name: 'Bladder Cancer',img:bladder},
     ]
     const navigate=useNavigate();
   return (
@@ -16,7 +20,7 @@ const HomeTreatment = () => {
     <div className="container md:w-[93%] grid sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
       {data.map((element,index) => (
         
-        <HomeCard name={element.name} description={""} index={index} key={index}/>
+        <HomeCard name={element.name} img={element.img} description={""} index={index} key={index}/>
         ))}
         
     </div>

@@ -18,24 +18,38 @@ const Navlinks = ({setOpen,open}) => {
               className=" text-#888888  hover:text-orange-400 transition-colors duration-300 flex justify-between items-center md:text-[16px] text-lg "
             >
               {link.submenu ? (
-                <span className="flex items-center">
+                <span className="flex items-center ">
+                  <img
+                className="w-[20px] h-[20px] self-center "
+                src={link.img}
+                alt={link.name}/>
                   {link.name}{" "}
                   {heading !== link.name ? <MdExpandMore /> : <MdExpandLess />}
                 </span>
               ) : (
-                <Link to={link.link} >{link.name}</Link>
+                <div className="flex transition-transform transform hover:translate-x-2 ">
+                  <img
+                className="w-[20px] h-[20px] self-center "
+                src={link.img}
+                alt={link.img}/>
+                 
+                  <Link to={link.link} className="pl-1" onClick={()=>setOpen(false)} >{link.name}</Link>
+                </div>
               )}
             </h1>
             {link.sublinks && (
               <div>
+                
                 <div className="absolute top-14 hidden group-hover:md:block hover:md:block bg-white shadow-md z-20 ">
                   <div className="bg-white px-5">
+
                     {link.sublinks.map((sub,index) => (
                       <li key={index} className="text-sm text-gray-600 my-2.5">
                         <Link
                           className="hover:text-yellow-400 transition-transform transform hover:translate-x-2 font-['Roboto']"
                           to={sub.link}
-                        > 
+                        >  
+                         
                           {sub.name}
                         </Link>
                       </li>

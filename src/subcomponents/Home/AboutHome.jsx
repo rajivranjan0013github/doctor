@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import React  from "react";
 import "./AboutHome.css";
 import img from "../../assets/profile.png";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion"; 
-
+import Button from "../../utils/Button";
+import {BsFillCalendarWeekFill,BsWhatsapp} from 'react-icons/bs'
+import { Link } from "react-router-dom";
 const AboutHome = () => {
+
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -12,7 +15,7 @@ const AboutHome = () => {
   //   console.log("Element is in view: ", inView)
   // }, [inView])
   const animationVariants = {
-    hidden: { x: -300, opacity: 0 },
+    hidden: { x: 300, opacity: 0 },
     animate: { x: 0, opacity: 1, transition: { duration: 2  } },
   };
   return (
@@ -37,6 +40,24 @@ const AboutHome = () => {
           <div className="description ">
             <TextContent/>
           </div>
+          <div className=" justify-around py-2   flex flex-col sm:flex-row gap-4">
+            <Link target="_blank" to="https://wa.me/9709993104">
+            <Button  
+                  classStyle={"bg-green-500  hover:bg-green-700 border-green-700 "}
+                  BsFillCalendarWeekFill={BsWhatsapp} 
+                  text={"Chat on Whatsapp"}/>
+            </Link>
+            <Link>
+            
+            </Link>
+           
+            <Button 
+                  classStyle={"bg-blue-500  hover:bg-blue-700 border-blue-700 "}
+                  BsFillCalendarWeekFill={BsFillCalendarWeekFill} 
+                  text={"Book an Appointment"}/>
+
+          </div>
+
         </div>
         {/* <VerticalComponent/> */}
       </div>

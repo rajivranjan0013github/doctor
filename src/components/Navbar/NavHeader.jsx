@@ -37,15 +37,19 @@ const Navbar = () => {
           </div>
           {/* desktop nav */}
           <ul className="md:flex hidden  items-center gap-8 font-[Poppins]">
-            <li className="md:text-lg text-2xl">
+            <li className="md:text-lg text-2xl ">
               <Link
-                className="hover:text-yellow-400 transition-transform transform hover:translate-x-2"
+                className="hover:text-yellow-400 transition-transform transform hover:translate-x-2 flex"
                 to={"/"}
               >
-                <AiFillHome />
+                 <img
+                className="w-[30px] h-[30px] self-center "
+                src={logo}
+                alt="home-"/>
+                <p className="pl-1">Home</p> 
               </Link>
             </li>
-            <Navlinks />
+            <Navlinks  setOpen={setOpen} open={open}/>
           </ul>
           {/* mobile nav */}
 
@@ -56,7 +60,7 @@ const Navbar = () => {
               } overflow-hidden transition-max-height duration-500 ease-in-out`}
             >
               <li className="text-lg pt-1 px-3 shadow-inner-md  py-3 my-3">
-                <Link className="hover:text-yellow-400 text-l " to={"/"}>
+                <Link className="hover:text-yellow-400 text-l " to={"/"} onClick={()=>setOpen(!open)}>
                   <AiFillHome />
                 </Link>
               </li>
@@ -73,13 +77,14 @@ export default Navbar;
 
 export const Logo = () => (
   <div className="flex">
+    <Link className="flex" to={'/'}>
     <div>
       <img src={logo} alt="reload" />
     </div>
-    <div className="px-2 items-center font-[Roboto]">
-      <h1 className="font-sans">Kidney</h1>
-      <h1>Stone</h1>
-      <h1>Uro Clinic</h1>
-    </div>
+    <div className="px-2  font-[Roboto] flex  md:flex-col md:items-start items-center  justify-start  ">
+      <h1 className="pl-1 font-sans">Kidney </h1>
+      <h1 className="pl-1"> Stone</h1>
+      <h1 className="pl-1"> Uro Clinic</h1>
+    </div></Link>
   </div>
 );
