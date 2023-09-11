@@ -82,7 +82,7 @@ const TreatmentDetailCard = ({data}) => {
                 text={"Book Appointment"}/>
           </div>
         
-        {/* subdata relate to treatment */}
+        {/* subData relate to treatment */}
         <h1 className='font-bold text-2xl py-5'>Our Location</h1>
         <MapAddress/>
     </motion.div>

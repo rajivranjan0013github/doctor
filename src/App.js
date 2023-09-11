@@ -11,6 +11,7 @@ import Blog from "./components/Blog/Blog";
 import TreatmentDetail from "./subcomponents/treatment/treatmentDetail/TreatmentDetail";
 import SideNavbar from "./components/sideNavbar/SideNavbar";
 import Treatments from "./subcomponents/treatment/Treatments";
+import BlogPage from "./components/Blog/BlogPage";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/services" Component={Treatments} />
 
         <Route path="/:treatmentName" Component={TreatmentDetail} />
+        <Route path="/urologist-blog/:BlogName" Component={BlogPage} />
 
       </Routes>
       <Footer />
