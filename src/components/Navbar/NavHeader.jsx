@@ -49,7 +49,7 @@ const Navbar = () => {
                 <p className="pl-1">Home</p> 
               </Link>
             </li>
-            <Navlinks />
+            <Navlinks  setOpen={setOpen} open={open}/>
           </ul>
           {/* mobile nav */}
 
@@ -60,7 +60,7 @@ const Navbar = () => {
               } overflow-hidden transition-max-height duration-500 ease-in-out`}
             >
               <li className="text-lg pt-1 px-3 shadow-inner-md  py-3 my-3">
-                <Link className="hover:text-yellow-400 text-l " to={"/"}>
+                <Link className="hover:text-yellow-400 text-l " to={"/"} onClick={()=>setOpen(!open)}>
                   <AiFillHome />
                 </Link>
               </li>

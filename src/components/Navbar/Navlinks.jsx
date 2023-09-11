@@ -32,7 +32,8 @@ const Navlinks = ({setOpen,open}) => {
                 className="w-[20px] h-[20px] self-center "
                 src={link.img}
                 alt={link.img}/>
-                  <Link to={link.link} className="pl-1" >{link.name}</Link>
+                 
+                  <Link to={link.link} className="pl-1" onClick={()=>setOpen(false)} >{link.name}</Link>
                 </div>
               )}
             </h1>
