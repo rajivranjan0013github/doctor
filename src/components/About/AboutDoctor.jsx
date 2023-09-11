@@ -13,7 +13,7 @@ const AboutDoctor = () => {
       initial='hidden'
       animate='animate'
       variants={animatedVariant}
-      className="flex justify-center p-3">
+      className="flex justify-center p-3 py-16">
       <div className="container md:w-[83%] grid md:grid-cols-2 grid-row font-[Roboto] ">
         <div>
           <img src={Img} alt="" className="w-full " />

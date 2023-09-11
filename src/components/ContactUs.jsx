@@ -96,7 +96,7 @@ const ContactUs = () => {
             style={{ border: 0 }}
             allowfullscreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
           <div className="grid grid-cols-2">
             <div className="py-5">

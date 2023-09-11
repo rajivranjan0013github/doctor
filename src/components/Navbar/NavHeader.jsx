@@ -37,12 +37,16 @@ const Navbar = () => {
           </div>
           {/* desktop nav */}
           <ul className="md:flex hidden  items-center gap-8 font-[Poppins]">
-            <li className="md:text-lg text-2xl">
+            <li className="md:text-lg text-2xl ">
               <Link
-                className="hover:text-yellow-400 transition-transform transform hover:translate-x-2"
+                className="hover:text-yellow-400 transition-transform transform hover:translate-x-2 flex"
                 to={"/"}
               >
-                <AiFillHome />
+                 <img
+                className="w-[30px] h-[30px] self-center "
+                src={logo}
+                alt="home-"/>
+                <p className="pl-1">Home</p> 
               </Link>
             </li>
             <Navlinks />
