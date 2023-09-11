@@ -4,14 +4,16 @@ import {BsFillCalendarWeekFill,BsWhatsapp} from 'react-icons/bs'
 import {motion } from 'framer-motion'
 import Button from "../../utils/Button";
 import { Link } from "react-router-dom";
+import AboutDoctorBottom from "./AboutDoctorBottom";
 const AboutDoctor = () => {
-  window.scrollTo(0,0);
+   window.scrollTo(0,0);
 
   const animatedVariant={
     hidden: { x: -300, opacity: 0 },
     animate: { x: 0, opacity: 1, transition: { duration: 2  } },
   }
   return (
+    <>
     <motion.div 
       initial='hidden'
       animate='animate'
@@ -66,8 +68,12 @@ const AboutDoctor = () => {
         </div>
         
       </div>
+     
       
     </motion.div>
+    <AboutDoctorBottom/>
+
+    </>
   );
 };
 
