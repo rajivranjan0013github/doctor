@@ -22,7 +22,7 @@ const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // You can perform form submission logic here
-    console.log(formData);
+    //console.log(formData);
   };
   const animatedVariant={
     hidden: { y: -300, opacity: 0 },

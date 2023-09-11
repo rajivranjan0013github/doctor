@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React  from "react";
 import "./AboutHome.css";
 import img from "../../assets/profile.png";
 import { useInView } from "react-intersection-observer";

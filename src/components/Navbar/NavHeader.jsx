@@ -77,13 +77,14 @@ export default Navbar;
 
 export const Logo = () => (
   <div className="flex">
+    <Link className="flex" to={'/'}>
     <div>
       <img src={logo} alt="reload" />
     </div>
     <div className="px-2  font-[Roboto] flex  md:flex-col md:items-start items-center  justify-start  ">
-      <h1 className="font-sans">Kidney</h1>
-      <h1>Stone</h1>
-      <h1>Uro Clinic</h1>
-    </div>
+      <h1 className="pl-1 font-sans">Kidney </h1>
+      <h1 className="pl-1"> Stone</h1>
+      <h1 className="pl-1"> Uro Clinic</h1>
+    </div></Link>
   </div>
 );

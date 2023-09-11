@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import {motion} from 'framer-motion'
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from 'react-router-dom';
@@ -9,9 +9,7 @@ const HomeCard = ({name,img,description,index}) => {
       });
 
       const navigate=useNavigate();
-    //   useEffect(() => {
-    //      console.log(inView)
-    //   }, [inView ])
+    
       const animationVariants = {
         hidden: { x: -150, scale:0.1 },
         animate: { x: 0, scale: 1, transition: { duration: 1.5  } },

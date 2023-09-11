@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { motion } from "framer-motion"; 
+import { useInView } from "react-intersection-observer";
 import { useParams } from 'react-router-dom'
 import BlogData from './BlogData'
 const BlogPage = () => {
@@ -15,11 +17,23 @@ const BlogPage = () => {
         const matchingElement = BlogData.find((element) => element.title === BlogName);
         if (matchingElement) {
             setBlogOpen(matchingElement)
-          console.log(matchingElement)
          }
       }, [BlogName]);
+
+      const { ref, inView } = useInView({
+        triggerOnce: true,
+      });
+      const animationVariants = {
+        hidden: { x: -300, opacity: 0 },
+        animate: { x: 0, opacity: 1, transition: { duration: 2  } },
+      };
    return (
-    <div className='p-[3rem] gap-4'>
+    <motion.div 
+      ref={ref}
+      initial="hidden"
+      animate={inView?"animate":"hidden"} 
+      variants={animationVariants}
+      className='p-[3rem] gap-4'>
 
         <h1 className='text-3xl font-semibold  mb-4'>{blogOpen.title}</h1>
         <h1 className='mb-4'>{blogOpen.subtitle}</h1>
@@ -34,7 +48,7 @@ const BlogPage = () => {
         </div>
       ))}
          
-    </div>
+    </motion.div>
   )
 }
 
