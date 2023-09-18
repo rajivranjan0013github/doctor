@@ -8,6 +8,8 @@ import HomeTreatment from "../subcomponents/treatment/HomeTreatment";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import BasicSpeedDial from "../subcomponents/Home/SpeedDial";
+import { Link } from "react-router-dom";
+// import { AiOutlineRight } from "react-icons/ai";
 
 const Home = () => {
   const { ref, inView } = useInView({
@@ -19,7 +21,7 @@ const Home = () => {
   };
   return (
     <div className="relative w-full  font-[Roboto] ">
-      <div className="z-10 bg-red-300 fixed right-[15px] bottom-[20px] md:hidden">
+      <div className="z-[101] bg-red-300 fixed right-[15px] bottom-[20px] md:hidden">
         <BasicSpeedDial />
       </div>
       <section
@@ -42,14 +44,12 @@ const Home = () => {
                   Comprehensive Solutions and Well-being in Urological Health.
                 </p>
                 <div className="text-center lg:text-left">
-                  <a
-                    href="appoinment.html"
-                    target="_blank"
+                  <Link
+                    to={"/appointment"}
                     className="inline-block px-6 py-3 bg-blue-700 text-white rounded-full hover:bg-blue-800"
                   >
-                    Make appointment{" "}
-                    <i className="ml-2 icofont-simple-right"></i>
-                  </a>
+                    <p> Make appointment </p>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -52,11 +52,13 @@ const AboutHome = () => {
             </Link>
             <Link></Link>
 
-            <Button
-              classStyle={"bg-blue-500  hover:bg-blue-700 border-blue-700 "}
-              BsFillCalendarWeekFill={BsFillCalendarWeekFill}
-              text={"Book an Appointment"}
-            />
+            <Link to={"/appointment"}>
+              <Button
+                classStyle={"bg-blue-500  hover:bg-blue-700 border-blue-700 "}
+                BsFillCalendarWeekFill={BsFillCalendarWeekFill}
+                text={"Book an Appointment"}
+              />
+            </Link>
           </div>
         </div>
         {/* <VerticalComponent/> */}
