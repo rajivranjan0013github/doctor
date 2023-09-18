@@ -34,15 +34,15 @@ const Footer = () => {
                 <br /> Bihar 812001
               </p>
             </div>
-        <Link 
-            target="_blank" 
-            to="https://www.google.com/maps/place/Dr+Rajan+Kumar+Sinha+(Superspecialist)+%7BM.Ch+-Urology%7D/@25.253668,87.008595,17z/data=!4m6!3m5!1s0x39f036209d394ebb:0xed9af541658ee7f5!8m2!3d25.2536679!4d87.0085947!16s%2Fg%2F11dybcrl_p?hl=en&entry=ttu">
-              <button  className="bg-[#1196CC] text-white p-2 rounded-md px-4 hover:opacity-70">
+            <Link
+              target="_blank"
+              to="https://www.google.com/maps/place/Dr+Rajan+Kumar+Sinha+(Superspecialist)+%7BM.Ch+-Urology%7D/@25.253668,87.008595,17z/data=!4m6!3m5!1s0x39f036209d394ebb:0xed9af541658ee7f5!8m2!3d25.2536679!4d87.0085947!16s%2Fg%2F11dybcrl_p?hl=en&entry=ttu"
+            >
+              <button className="bg-[#1196CC] text-white p-2 rounded-md px-4 hover:opacity-70">
                 Get Direction
               </button>
-        </Link>
+            </Link>
 
-            
             <div className="py-5">
               <div className="flex">
                 <IoCall className="self-center" />
@@ -60,9 +60,12 @@ const Footer = () => {
           <div className=" w-[100%]">
             <h1 className="text-white text-xl md:pb-6 pb-2">Useful Links</h1>
             <div className="md:grid md:grid-cols-2 ">
-              {list1.map((link,index) => (
+              {list1.map((link, index) => (
                 <div key={index} className="pr-5  ">
-                  <Link className="text-[#808080] hover:opacity-60" to={"#"}>
+                  <Link
+                    to={link.link}
+                    className="text-[#808080] hover:opacity-60"
+                  >
                     {link.name}
                   </Link>
                   <div className="border-b-[1px] border-[#808080] border-dashed pt-2.5 mb-2.5"></div>
@@ -75,7 +78,7 @@ const Footer = () => {
         <div className=" flex flex-col md:pr-20 pr-2">
           <h1 className="text-white md:pb-6 pb-2 text-xl ">Timings</h1>
           <div className="text-[#808080] md:w-[70%] w-[100%]">
-            {timings.map((element,index) => (
+            {timings.map((element, index) => (
               <div key={index} className="pr-5 h-auto ">
                 <div className="flex justify-between">
                   <p>{element.name}</p>

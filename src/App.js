@@ -12,12 +12,14 @@ import TreatmentDetail from "./subcomponents/treatment/treatmentDetail/Treatment
 import SideNavbar from "./components/sideNavbar/SideNavbar";
 import Treatments from "./subcomponents/treatment/Treatments";
 import BlogPage from "./components/Blog/BlogPage";
+import Appointment from "./components/Appointment";
+import Success from "./components/Success";
 
 const App = () => {
   return (
     <Router>
       <Navbar />
-      <SideNavbar/>
+      <SideNavbar />
       <Routes>
         <Route path="/" Component={Home} />
         <Route path="/contact-us" Component={ContactUs} />
@@ -31,9 +33,11 @@ const App = () => {
         {/* treatments router here */}
         <Route path="/services" Component={Treatments} />
 
+        <Route path="/appointment" Component={Appointment} />
+        <Route path="/success" Component={Success} />
+
         <Route path="/:treatmentName" Component={TreatmentDetail} />
         <Route path="/urologist-blog/:BlogName" Component={BlogPage} />
-
       </Routes>
       <Footer />
     </Router>
