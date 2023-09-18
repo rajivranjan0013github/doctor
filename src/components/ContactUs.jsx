@@ -4,6 +4,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import {motion } from 'framer-motion'
 
 const ContactUs = () => {
+  window.scrollTo(0,0);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,9 +31,9 @@ const ContactUs = () => {
   }
   return (
     <motion.div 
-    initial='hidden'
-    animate='animate'
-    variants={animatedVariant}
+      initial='hidden'
+      animate='animate'
+      variants={animatedVariant}
       className=" md:m-3 font-[Roboto] flex justify-center items-center w-full">
       <div className="flex justify-center lg:flex-row flex-col py-5 gap-8">
        

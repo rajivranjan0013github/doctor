@@ -15,7 +15,7 @@ import Lithotripsy from '../../../../assets/services_image/Lithotripsy.png'
 
 const TreatmentDetailData=[
     {
-        name: 'Kidney Stone Treatment',
+        name: 'Kidney Stone',
         img:kidney,
         description:
           'Kidney stone treatment involves various medical techniques to address kidney stones, which are solid masses formed from crystals in the urine. These stones can cause severe pain and discomfort and may require intervention for removal.',

@@ -7,11 +7,11 @@ const BlogCard = ({title,img}) => {
         navigate(`/urologist-blog/${title}`)
     }
   return (
-    <div className='w-[90%] sm:w-[45%]  border border-black'>
-        <img className="w-[90%]  h-[10rem] self-center py-2 m-auto" src={img} alt="" />
-        <h1>{title}</h1>
-        <div className='flex justify-end '>
-            <button onClick={()=>BlogPageHandler(title)}>Read More</button></div>
+    <div className='w-[90%] sm:w-[45%]  border border-black p-4 cursor-pointer' onClick={()=>BlogPageHandler(title)}>
+        <img className="w-[90%]  h-[15rem] rounded-3xl self-center py-2 m-auto object-cover" src={img} alt="" />
+        <h1 className='text-center text-[1.1rem] font-semibold'>{title}</h1>
+        <div className='flex justify-end py-2'>
+            <button onClick={()=>BlogPageHandler(title)} className='text-center text-[1.1rem] font-semibold'>Read More</button></div>
     </div>
   )
 }

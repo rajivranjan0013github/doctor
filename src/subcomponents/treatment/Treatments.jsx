@@ -2,8 +2,8 @@ import React from "react";
 import service from "./treatmentDetail/TreatmentDetailData/TreatmentDetailData";
 import Card from "./Card";
 const Treatments = () => {
-  console.log('service')
-   return (
+  window.scrollTo(0,0);
+    return (
     <div className="container mx-auto max-w-7xl  flex flex-col justify-center items-center pt-[1rem]">
       <div className="inline-block text-3xl my-3 font-semibold   text-stone-700">
           <h1>Our Services</h1>

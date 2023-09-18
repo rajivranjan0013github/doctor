@@ -10,6 +10,7 @@ import typeStone from '../../assets/Blog_image/types-of-kidney-stone.webp'
 import myths from '../../assets/Blog_image/myths.jpg'
 
 const Blog = () => {
+  window.scrollTo(0,0);
   const { ref, inView } = useInView({
     triggerOnce: true,
   });

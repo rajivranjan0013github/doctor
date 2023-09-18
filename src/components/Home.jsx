@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 // import { AiOutlineRight } from "react-icons/ai";
 
 const Home = () => {
+  window.scrollTo(0,0);
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
