@@ -15,7 +15,7 @@ export const links = [
     img: treatment,
     submenu: true,
     sublinks: [
-      { name: "Kidney Stone Removal", link: "/Kidney%20Stone%20Treatment" },
+      { name: "Kidney Stone Removal", link: "/Kidney%20Stone" },
       { name: "Endourology", link: "/Endourology" },
       { name: "Lithotripsy", link: "/Lithotripsy" },
       { name: "Andrology & Infertility", link: "/Andrology%20&%20Infertility" },

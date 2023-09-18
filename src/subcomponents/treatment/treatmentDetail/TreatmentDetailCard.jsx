@@ -4,8 +4,11 @@ import { useInView } from 'react-intersection-observer'
 import MapAddress from "../../testimonial/MapAddress"
 import {BsFillCalendarWeekFill} from 'react-icons/bs'
 import Button from '../../../utils/Button'
+import { useNavigate,Link } from 'react-router-dom'
+
 
 const TreatmentDetailCard = ({data}) => {
+  const navigate=useNavigate()
   
     const[ref,inView]=useInView({
         triggerOnce:true,
@@ -76,10 +79,15 @@ const TreatmentDetailCard = ({data}) => {
             <h1 className='text-zinc-700 py-6'>
               {data.consultation}
             </h1>
-              <Button 
+            <Link
+                to='/appointment'
+            >
+            <Button 
                 BsFillCalendarWeekFill={BsFillCalendarWeekFill} 
                 classStyle={"bg-blue-500  hover:bg-blue-700 border-blue-700 "}
                 text={"Book Appointment"}/>
+            </Link>
+              
           </div>
         
         {/* subData relate to treatment */}
