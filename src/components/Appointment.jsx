@@ -30,7 +30,9 @@ const Appointment = () => {
   const [upcomming, setUpcomming] = useState(null);
 
   const navigate = useNavigate();
-  window.scrollTo(0, 0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     const cookie = Cookie.get("appointment");
     if (cookie && !upcomming) {
@@ -115,7 +117,7 @@ const Appointment = () => {
       {/* form is here */}
       <div className="w-full justify-center flex font-[Roboto]">
         <div className="md:w-[75%] w-full p-3 md:flex">
-          <div className=" flex-[1] justify-center w-full mx-[5px] pl-2 bg-gray-100 py-4 rounded-3xl ">
+          <div className=" flex-[1] justify-center w-full mx-[5px] md:pl-2 bg-gray-100 py-4 rounded-3xl ">
             <div className="  min-h-[150px] flex flex-col items-center   ">
               <div className="">
                 <h1 className="text-[#223a66] text-[2rem] text-center  font-bold">
