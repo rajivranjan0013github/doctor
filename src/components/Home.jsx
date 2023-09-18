@@ -7,12 +7,12 @@ import Testimonial from "../subcomponents/testimonial/Testimonial";
 import HomeTreatment from "../subcomponents/treatment/HomeTreatment";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import BasicSpeedDial from "../subcomponents/Home/SpeedDial";
+// import BasicSpeedDial from "../subcomponents/Home/SpeedDial";
 import { Link } from "react-router-dom";
 // import { AiOutlineRight } from "react-icons/ai";
 
 const Home = () => {
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -22,9 +22,9 @@ const Home = () => {
   };
   return (
     <div className="relative w-full  font-[Roboto] ">
-      <div className="z-[101] bg-red-300 fixed right-[15px] bottom-[20px] md:hidden">
+      {/* <div className="z-[101] bg-red-300 fixed right-[15px] bottom-[20px] md:hidden">
         <BasicSpeedDial />
-      </div>
+      </div> */}
       <section
         className=" py-4 "
         style={{ backgroundImage: `url(${img2})`, backgroundSize: "cover" }}
@@ -59,7 +59,7 @@ const Home = () => {
       </section>
 
       {/* about profile */}
-      <div className="max-w-7xl mx-auto justify-center w-full flex">
+      <div className="max-w-7xl  mx-auto justify-center w-full flex">
         <AboutHome />
       </div>
       {/* number of services part */}

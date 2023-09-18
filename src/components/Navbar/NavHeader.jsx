@@ -60,11 +60,12 @@ const Navbar = () => {
             >
               <li className="text-lg pt-1 px-3 shadow-inner-md mt-3">
                 <Link
-                  className="hover:text-yellow-400 text-l "
+                  className="hover:text-yellow-400 text-l flex  items-center shadow-sm pb-2 "
                   to={"/"}
                   onClick={() => setOpen(!open)}
                 >
                   <AiFillHome />
+                  <p className="pl-2">Home</p>
                 </Link>
               </li>
               <Navlinks setOpen={setOpen} open={open} />

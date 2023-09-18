@@ -23,7 +23,7 @@ const AboutHome = () => {
       initial="hidden"
       animate={inView ? "animate" : "hidden"}
       variants={animationVariants}
-      className="md:w-[80%] w-[95%] py-[1rem] "
+      className="md:w-[80%] w-[97%] py-[1rem] "
     >
       <div className="aboutheading ">
         <p>About</p>
@@ -37,7 +37,7 @@ const AboutHome = () => {
             <div className="name">Dr. Rajan Kumar Sinha</div>
             <div className="degree">MBBS,MS(General surgery),Mch(Urology)</div>
           </div>
-          <div className="description ">
+          <div className="description  ">
             <TextContent />
           </div>
           <div className=" justify-around py-2   flex flex-col sm:flex-row gap-4">
@@ -71,7 +71,7 @@ export default AboutHome;
 
 const TextContent = () => {
   return (
-    <p className="text-stone-700 text-left  px-8">
+    <p className="text-stone-700 text-left md:px-8 px-3">
       Dr. Sinha has expertise in{" "}
       <b>
         Endourology, Reconstructive Urology, , Urological Oncology, Andrology
