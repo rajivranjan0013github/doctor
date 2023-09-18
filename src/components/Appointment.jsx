@@ -15,7 +15,8 @@ import { Alert } from "@mui/material";
 import img2 from "../assets/support.svg";
 import { useNavigate } from "react-router-dom";
 import Cookie from "js-cookie";
-import {motion } from 'framer-motion'
+import { motion } from "framer-motion";
+import { BsCalendarCheckFill } from "react-icons/bs";
 
 //
 const Appointment = () => {
@@ -29,13 +30,13 @@ const Appointment = () => {
   const [upcomming, setUpcomming] = useState(null);
 
   const navigate = useNavigate();
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
   useEffect(() => {
     const cookie = Cookie.get("appointment");
     if (cookie && !upcomming) {
       const array = cookie.split(":");
       setUpcomming({
-        date: array[1],
+        date: changeDateFormate(array[1]),
         time: array[0],
       });
     }
@@ -85,26 +86,29 @@ const Appointment = () => {
     { time: "03 - 04PM", value: 15 },
     { time: "04 - 05PM", value: 16 },
   ];
-  const animatedVariant={
+  const animatedVariant = {
     hidden: { x: 0, opacity: 0 },
-    animate: { y: 0, opacity: 1, transition: { duration: 2  } },
-  }
+    animate: { y: 0, opacity: 1, transition: { duration: 2 } },
+  };
 
   return (
-    <motion.div 
-      initial='hidden'
-      animate='animate'
+    <motion.div
+      initial="hidden"
+      animate="animate"
       variants={animatedVariant}
-      className="w-full pb-5 max-w-7xl mx-auto justify-center   ">
+      className="w-full pb-5 max-w-7xl mx-auto justify-center   "
+    >
       <div
-        className="pt-[120px] pb-[100px] relative"
+        className="pt-[120px] pb-[100px] relative "
         style={{ backgroundImage: `url(${img})`, backgroundSize: "cover" }}
       >
         <div className="overlay"></div>
         <div className="container relative  font-[Roboto]">
           <div className="text-center text-white ">
-            <span className="text-sm">Book your  </span>
-            <h1 className="text-capitalize mb-5 text-4xl gap-0 ">Appointment </h1>
+            <span className="text-sm">Book your </span>
+            <h1 className="text-capitalize mb-5 text-4xl gap-0 ">
+              Appointment{" "}
+            </h1>
           </div>
         </div>
       </div>
@@ -112,54 +116,66 @@ const Appointment = () => {
       <div className="w-full justify-center flex font-[Roboto]">
         <div className="md:w-[75%] w-full p-3 md:flex">
           <div className=" flex-[1] justify-center w-full mx-[5px] pl-2 bg-gray-100 py-4 rounded-3xl ">
-            
-            
             <div className="  min-h-[150px] flex flex-col items-center   ">
               <div className="">
-                  <h1 className="text-[#223a66] text-[2rem] text-center  font-bold">Business Hours</h1>
-
-                  <h2 className="text-[#223a66]  text-center text-[1.2rem]  pt-2 font-bold" >OPENING DAYS</h2>
-                  <p className="font-semibold text-center">Monday-Friday 10 am - 6pm</p>
-
-                  <h2 className="text-[#223a66] text-center text-[1.2rem] pt-4 font-bold">VACATIONS</h2>
-                  <p className="font-semibold text-center" >All Sunday</p>
-                  <p className="font-semibold text-center pb-4">All Official Holidays</p>
-                </div>
-                <div className="w-[80%] h-[2px] bg-zinc-500"></div>
-                <div className=" w-[50px] h-[50px] pt-4">
-                  <img src={img2} alt="" />
-                </div>
-                <h1 className="text-[1.2rem] font-semibold text-[#223a66] pt-4">
-                  Call for an Emergency Service!
+                <h1 className="text-[#223a66] text-[2rem] text-center  font-bold">
+                  Business Hours
                 </h1>
-                <a
-                  href="tel: +91 97099 93104"
-                  className="text-[#223a66]   font-semibold text-[2rem]"
-                >
-                  {" "}
-                  +91 97099 93104
-                </a>
-                 
+
+                <h2 className="text-[#223a66]  text-center text-[1.2rem]  pt-2 font-bold">
+                  OPENING DAYS
+                </h2>
+                <p className="font-semibold text-center">
+                  Monday-Friday 10 am - 6pm
+                </p>
+
+                <h2 className="text-[#223a66] text-center text-[1.2rem] pt-4 font-bold">
+                  VACATIONS
+                </h2>
+                <p className="font-semibold text-center">All Sunday</p>
+                <p className="font-semibold text-center pb-4">
+                  All Official Holidays
+                </p>
+              </div>
+              <div className="w-[80%] h-[2px] bg-zinc-500"></div>
+              <div className=" w-[50px] h-[50px] pt-4">
+                <img src={img2} alt="" />
+              </div>
+              <h1 className="text-[1.2rem] font-semibold text-[#223a66] pt-4">
+                Call for an Emergency Service!
+              </h1>
+              <a
+                href="tel: +91 97099 93104"
+                className="text-[#223a66]   font-semibold text-[2rem]"
+              >
+                {" "}
+                +91 97099 93104
+              </a>
             </div>
             {upcomming && (
-              <div>
-                <p>Booked</p>
-                <h1>Next Appointment at</h1>
-                <h1>{upcomming.time}</h1>
-                <h1>{upcomming.date}</h1>
+              <div className=" flex flex-col justify-center  items-center mt-3 ">
+                <div className="flex justify-center items-center  ">
+                  <BsCalendarCheckFill className="text-blue-500" />
+                  <p className="pl-1 text-lg ">Booked</p>
+                </div>
+                <div className=" justify-center items-center text-sm flex flex-col">
+                  <h1>Next Appointment at</h1>
+                  <h1>{upcomming.time}</h1>
+                  <h1>{upcomming.date}</h1>
+                </div>
               </div>
             )}
           </div>
           <div className=" pl-2 flex-[2] my-2 ">
-            <div className="mx-[5px] bg-[#223a66] p-4">
-              <h1 className="md:text-[44px] text-3xl text-white md:mb-2 font-semibold">
-                Book an appointment 
+            <div className="mx-[5px]  ">
+              <h1 className="md:text-[44px] text-3xl text-[#223a66]   md:mb-2 font-semibold">
+                Book an appointment
               </h1>
-              <p className="text-white">
-              Welcome to our urology clinic, where we specialize in providing 
-              expert care for urological issues. Our dedicated team is here to assist you with a wide range of 
-              urological concerns. Don't hesitate to reach out to us to schedule an appointment.
-
+              <p className="">
+                Welcome to our urology clinic, where we specialize in providing
+                expert care for urological issues. Our dedicated team is here to
+                assist you with a wide range of urological concerns. Don't
+                hesitate to reach out to us to schedule an appointment.
               </p>
               {showAlert && (
                 <Alert severity="info">
@@ -272,3 +288,24 @@ const Appointment = () => {
 };
 
 export default Appointment;
+
+const changeDateFormate = (a) => {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  a = a.split("/");
+
+  const ans = `${a[1]} ${months[a[0] - 1]} ${a[2]}`;
+  return ans;
+};
