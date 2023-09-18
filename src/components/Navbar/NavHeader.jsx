@@ -21,7 +21,7 @@ const Navbar = () => {
     };
   }, [windowWidth]);
   return (
-    <nav className="bg-white w-screen drop-shadow-md sticky top-0 z-20">
+    <nav className="bg-white w-screen drop-shadow-md sticky top-[-1px] z-20">
       <div className="flex items-center font-medium md:justify-around justify-between px-5 py-2">
         {/* logo and text */}
         <Logo />

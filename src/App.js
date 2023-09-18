@@ -5,7 +5,7 @@ import "./App.css";
 import Navbar from "./components/Navbar/NavHeader";
 import Footer from "./components/Footer";
 import AboutDoctor from "./components/About/AboutDoctor";
-import AboutHospital from "./components/About/AboutHospital";
+// import AboutHospital from "./components/About/AboutHospital";
 import ContactUs from "./components/ContactUs";
 import Blog from "./components/Blog/Blog";
 import TreatmentDetail from "./subcomponents/treatment/treatmentDetail/TreatmentDetail";
@@ -25,10 +25,7 @@ const App = () => {
         <Route path="/contact-us" Component={ContactUs} />
 
         <Route path="/urologist-in-bhagalpur" Component={AboutDoctor} />
-        <Route
-          path="/urologist-hospital-in-bhagalpur"
-          Component={AboutHospital}
-        />
+
         <Route path="/urologist-blog" Component={Blog} />
         {/* treatments router here */}
         <Route path="/services" Component={Treatments} />

@@ -18,7 +18,7 @@ const AboutDoctor = () => {
         initial="hidden"
         animate="animate"
         variants={animatedVariant}
-        className="flex justify-center p-3 py-16"
+        className="flex justify-center p-3 "
       >
         <div className="container md:w-[83%] grid md:grid-cols-2 grid-row font-[Roboto] ">
           <div>
@@ -31,7 +31,7 @@ const AboutDoctor = () => {
                 (M.B.B.S, M.S, M.Ch, ESFFU, EUREP - Fellowship)
               </h1>
             </div>
-            <p className=" text-xl opacity-75">
+            <p className="  opacity-85">
               Welcome to Kidney Stone & Urology Clinic, the premier urology
               clinic in Bhagalpur City, Bhagalpur. Our clinic is led by Dr.
               Rajan Kumar Sinha, a highly experienced urologist with over 9
