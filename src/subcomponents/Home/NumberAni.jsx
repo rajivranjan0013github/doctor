@@ -14,9 +14,9 @@ const NumberAni = () => {
 
   const countArray = [
     { name: "LASER & OPEN SURGERIES DONE", count: 1450 },
-    { name: "PROSTATE DISEASE CASES TREATED", count: 4800 },
-    { name: "KIDNEY & BLADDER STONES REMOVED", count: 5800 },
-    { name: "ERECTILE DYSFUNCTION CASES TREATED", count: 12000 },
+    { name: "PROSTATE DISEASE CASES TREATED", count: 3000 },
+    { name: "KIDNEY & BLADDER STONES REMOVED", count: 3000},
+    { name: "ERECTILE DYSFUNCTION CASES TREATED", count: 1000},
   ];
   return (
     <motion.div

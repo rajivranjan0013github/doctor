@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Navlinks from "./Navlinks";
 import { AiOutlineMenu, AiFillHome } from "react-icons/ai";
-import logo from "../../assets/logo_d.png";
+import logo from "../../assets/logokidney.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);

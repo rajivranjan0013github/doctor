@@ -56,7 +56,7 @@ const AboutDoctor = () => {
                     "bg-green-500  hover:bg-green-700 border-green-700 "
                   }
                   BsFillCalendarWeekFill={BsWhatsapp}
-                  text={"Chat on Whatsapp"}
+                  text={"Book on Whatsapp"}
                 />
               </Link>
               <Link></Link>

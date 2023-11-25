@@ -35,7 +35,7 @@ const AboutHome = () => {
           </div>
           <div className="names">
             <div className="name">Dr. Rajan Kumar Sinha</div>
-            <div className="degree">MBBS,MS(General surgery),Mch(Urology)</div>
+            <div className="degree">MBBS,MS(General surgery),M.Ch(Urology)</div>
           </div>
           <div className="description  ">
             <TextContent />
@@ -47,7 +47,7 @@ const AboutHome = () => {
                   "bg-green-500  hover:bg-green-700 border-green-700 "
                 }
                 BsFillCalendarWeekFill={BsWhatsapp}
-                text={"Chat on Whatsapp"}
+                text={"Book Appointment on Whatsapp"}
               />
             </Link>
             <Link></Link>
@@ -78,11 +78,11 @@ const TextContent = () => {
       </b>{" "}
       as well as <b>Laparoscopic Urological Surgery</b>. He has done his
       schooling from <b>Sainik School Tilaiya (Jharkhand)</b>. Then he passed
-      M.B.B.S. (2005) followed by <b>MS (General Surgery)</b> in 2010 from{" "}
+      M.B.B.S followed by <b>MS (General Surgery)</b>from{" "}
       <b>RIMS, Ranchi, Jharkhand</b>. After his Master's Degree he worked as
-      Senior Resident in Deptartment of Urology at <b>IGIMS, Patna (2011-12)</b>
+      Senior Resident in Deptartment of Urology at <b>IGIMS, Patna.</b>
       . Thereafter, He pursued <b>M.Ch</b> in <b>Urology</b> from <b>CNMCH</b>,
-      Kolkata (2013-15).{" "}
+      Kolkata.
     </p>
   );
 };
